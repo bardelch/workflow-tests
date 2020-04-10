@@ -1,1 +1,18 @@
+#name of the workflow
+name: push-test
+#what events trigger this workflow
+on: [push, pull_request]
 
+#jobs run in parallel
+jobs: 
+  #jobID
+  license-check:
+    # Name of the job on github
+    name: License Check
+    # docker image the runner is using
+    runs-on: [ubuntu-latest]
+    
+    # steps of the job run sequentially  
+    steps: 
+      - name: validate-license-action
+        uses: datreeio/validate-license-action@v1.0.0
