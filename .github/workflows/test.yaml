@@ -14,5 +14,8 @@ jobs:
     
     # steps of the job run sequentially  
     steps: 
+      - name: checkout
+        uses: actions/checkout@v2
+        
       - name: validate-license-action
         uses: datreeio/validate-license-action@v1.0.0
