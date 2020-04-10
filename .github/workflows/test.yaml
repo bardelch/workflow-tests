@@ -17,6 +17,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         
+      - name: List
+        run: ls -al
+        
         #https://github.com/marketplace/actions/docker-publish
         #https://www.docker.com/blog/first-docker-github-action-is-here/
       - name: Dockerize
